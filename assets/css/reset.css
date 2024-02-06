@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "CHN_Font";
+  font-style: normal;
+  font-weight: 300;
+  src: local("power-china-regular"), url();
+  src: local("power-china-regular"), url(fonts/power-china-regular.eot);
+  src: url(fonts/power-china-regular.eot?#iefix) format("embedded-opentype"),
+    url(fonts/power-china-regular.woff2) format("woff2"),
+    url(fonts/power-china-regular.woff) format("woff");
+}
+@font-face {
+  font-family: "Adobe";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Adobe Myungjo Std M"), url(fonts/adobe-myungjo-std-m.otf);
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Noto Sans Light"), local("NotoSans-Light"), url();
+  src: local("Noto Sans Light"), local("NotoSans-Light"),
+    url(fonts/NotoSans-Light.eot);
+  src: url(fonts/NotoSans-Light.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Light.woff2) format("woff2"),
+    url(fonts/NotoSans-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Noto Sans Regular"), local("NotoSans-Regular"),
+    url(fonts/NotoSans-Regular.eot);
+  src: url(fonts/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Regular.woff2) format("woff2"),
+    url(fonts/NotoSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Noto Sans Medium"), local("NotoSans-Medium"),
+    url(fonts/NotoSans-Medium.eot);
+  src: url(fonts/NotoSans-Medium.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Medium.woff2) format("woff2"),
+    url(fonts/NotoSans-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Noto Sans Bold"), local("NotoSans-Bold"),
+    url(fonts/NotoSans-Bold.eot);
+  src: url(fonts/NotoSans-Bold.eot?#iefix) format("embedded-opentype"),
+    url(fonts/NotoSans-Bold.woff2) format("woff2"),
+    url(fonts/NotoSans-Bold.woff) format("woff");
+}
+
+* {
+  box-sizing: border-box;
+  color: #000;
+  font-family: "Noto Sans KR", sans-serif !important;
+  word-break: keep-all;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1em;
+  color: #333;
+  position: relative;
+  letter-spacing: -0.4px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body > div > iframe {
+  display: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s !important;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 체크박스 css리셋 */
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #707070;
+  position: relative;
+}
+input[id="check1"]:checked + label::after {
+  content: "✔";
+  font-size: 20px;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
