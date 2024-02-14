@@ -1022,8 +1022,128 @@ ul.desc_list {
 }
 .Map_box {
   text-align: center;
-  padding: 50px 0;
+  padding-top: 30px;
 }
 .Map_box img {
   width: 800px;
+}
+.plan_box {
+  padding-top: 30px;
+}
+
+.plan_box .plan_table {
+  width: 100%;
+  text-align: center;
+}
+.introduction_MemberList {
+  padding-top: 30px;
+}
+.plan_box .plan_table thead th {
+  height: 40px;
+  vertical-align: middle;
+  background: var(--colorLogo);
+  border: 1px solid white;
+  color: white;
+}
+
+.plan_box .plan_table tbody td {
+  height: 40px;
+  vertical-align: middle;
+  border: 1px solid#e5e5e5;
+}
+.noticeheader p {
+  padding: 15px 0;
+  border-top: 2px solid #2c2c2c;
+  border-bottom: 1px solid #d7d7d7;
+  color: #222;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.notice_box {
+  padding-top: 30px;
+}
+.noticeheader {
+  display: flex;
+  width: 100%;
+}
+.noticeList {
+  padding-top: 20px;
+}
+.noticeList p:nth-child(1) {
+  width: 7%;
+}
+.noticeList p:nth-child(2) {
+  width: 61%;
+}
+.noticeList p:nth-child(3) {
+  width: 10%;
+}
+.noticeList p:nth-child(4) {
+  width: 12%;
+}
+.noticeList p:nth-child(5) {
+  width: 10%;
+}
+li.noticeItem {
+  display: flex;
+  align-items: center;
+}
+
+li.noticeItem p {
+  border-top: 0px solid #d7d7d7;
+  border-bottom: 1px solid #c6c6c6;
+  word-break: break-all;
+  font-size: 14px;
+  color: #222;
+  font-weight: 200;
+  padding: 15px 0;
+  text-align: center;
+}
+.noticeItem p:nth-child(2) {
+  text-align: left;
+  padding: 15px 10px;
+}
+
+#ln_form {
+  display: flex;
+  justify-content: flex-end;
+}
+#ln_form select {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border: 1px solid #dddddd;
+  margin-right: 10px;
+  padding-left: 16px;
+  padding-right: 20px;
+  color: black;
+  width: 150px;
+}
+#ln_form > div {
+  display: flex;
+}
+#ln_form > div > input:first-child {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border: 1px solid #dddddd;
+  width: 230px;
+  height: 43px;
+  padding-left: 16px;
+  margin: 0;
+  color: #8a8a8a;
+}
+#ln_form > div > input:last-child {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #8d8d8d;
+  width: 65px;
+  height: 43px;
+  background: black;
+  color: #fff;
+  cursor: pointer;
 }
