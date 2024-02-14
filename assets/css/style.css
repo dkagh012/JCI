@@ -1012,3 +1012,18 @@ ul.desc_list {
   padding-top: 10px;
   padding-left: 10px;
 }
+.desc_item {
+  font-weight: 300;
+  line-height: 1.7;
+}
+.desc_item ul {
+  padding-left: 16px;
+  font-weight: 200;
+}
+.Map_box {
+  text-align: center;
+  padding: 50px 0;
+}
+.Map_box img {
+  width: 800px;
+}
