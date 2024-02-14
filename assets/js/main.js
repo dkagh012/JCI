@@ -20,7 +20,7 @@ const pop_Click = document.querySelectorAll(".pop_menu div button");
 const MainCommunity = document.querySelectorAll(".tabled");
 const subMenuOpenBtn = document.querySelector(".subMenuOpenBtn");
 const SubMenuList = document.querySelector(".sub_MenuList");
-
+const MemberHistoryButton = document.querySelectorAll(".MemberHistoryButton");
 for (let i = 0; i < SubMenuOpen.length; i++) {
   SubMenuOpen[i].addEventListener("mouseover", () => {
     SubMenu[i].style.display = "flex";
@@ -249,3 +249,28 @@ if (subMenuOpenBtn) {
     }
   });
 }
+
+const introductionBox = document.querySelector(".introduction_box");
+const introductionMemberList = document.querySelector(
+  ".introduction_MemberList"
+);
+
+MemberHistoryButton.forEach((Item) => {
+  Item.addEventListener("click", () => {
+    MemberHistoryButton.forEach((prevItem) => {
+      if (prevItem !== Item && prevItem.classList.contains("MemberActive")) {
+        removeClassList(prevItem, "MemberActive");
+      }
+    });
+
+    if (Item === MemberHistoryButton[0]) {
+      introductionBox.style.display = "block";
+      introductionMemberList.style.display = "none";
+    } else if (Item === MemberHistoryButton[1]) {
+      introductionBox.style.display = "none";
+      introductionMemberList.style.display = "block";
+    }
+
+    addClassList(Item, "MemberActive");
+  });
+});
