@@ -29,6 +29,8 @@ for (let i = 0; i < SubMenuOpen.length; i++) {
     Black_Logo.style.display = "block";
     White_Logo.style.display = "none";
     addClassList(header, "MenuOpenEvent");
+    header.style.boxShadow = "0px 0px 7px 0px #999";
+    header.style.borderBottom = "1px solid #dcdcdc";
   });
   SubMenu[i].addEventListener("mouseover", () => {
     SubMenu[i].style.display = "flex";
@@ -37,6 +39,8 @@ for (let i = 0; i < SubMenuOpen.length; i++) {
     Black_Logo.style.display = "block";
     addClassList(header, "MenuOpenEvent");
     White_Logo.style.display = "none";
+    header.style.boxShadow = "0px 0px 7px 0px #999";
+    header.style.borderBottom = "1px solid #dcdcdc";
   });
   SubMenuOpen[i].addEventListener("mouseout", () => {
     if (window.scrollY > 66) {
@@ -47,6 +51,8 @@ for (let i = 0; i < SubMenuOpen.length; i++) {
       Black_Logo.style.display = "block";
       White_Logo.style.display = "none";
       removeClassList(header, "MenuOpenEvent");
+      header.style.boxShadow = "0px 0px 7px 0px #999";
+      header.style.borderBottom = "1px solid #dcdcdc";
     } else {
       SubMenu[i].style.display = "none";
       header.style.background = "transparent";
@@ -54,6 +60,8 @@ for (let i = 0; i < SubMenuOpen.length; i++) {
       Black_Logo.style.display = "none";
       White_Logo.style.display = "block";
       removeClassList(header, "MenuOpenEvent");
+      header.style.boxShadow = "none";
+      header.style.borderBottom = "none";
     }
   });
   SubMenu[i].addEventListener("mouseout", () => {
@@ -65,6 +73,8 @@ for (let i = 0; i < SubMenuOpen.length; i++) {
       Black_Logo.style.display = "block";
       White_Logo.style.display = "none";
       removeClassList(header, "MenuOpenEvent");
+      header.style.boxShadow = "0px 0px 7px 0px #999";
+      header.style.borderBottom = "1px solid #dcdcdc";
     } else {
       SubMenu[i].style.display = "none";
       header.style.background = "transparent";
@@ -72,6 +82,8 @@ for (let i = 0; i < SubMenuOpen.length; i++) {
       Black_Logo.style.display = "none";
       White_Logo.style.display = "block";
       removeClassList(header, "MenuOpenEvent");
+      header.style.boxShadow = "none";
+      header.style.borderBottom = "none";
     }
   });
 }
@@ -82,6 +94,8 @@ if (document.querySelector(".MainSwiperContainer")) {
       headerMenuList.style.color = "black";
       Black_Logo.style.display = "block";
       White_Logo.style.display = "none";
+      header.style.boxShadow = "0px 0px 7px 0px #999";
+      header.style.borderBottom = "1px solid #dcdcdc";
     } else if (
       window.innerWidth <= 768 &&
       window.innerWidth > 425 &&
@@ -91,6 +105,8 @@ if (document.querySelector(".MainSwiperContainer")) {
       headerMenuList.style.color = "black";
       Black_Logo.style.display = "block";
       White_Logo.style.display = "none";
+      header.style.boxShadow = "0px 0px 7px 0px #999";
+      header.style.borderBottom = "1px solid #dcdcdc";
     } else if (
       window.innerWidth <= 768 &&
       window.innerWidth > 425 &&
@@ -100,26 +116,36 @@ if (document.querySelector(".MainSwiperContainer")) {
       header.style = " ";
       Black_Logo.style.display = "none";
       White_Logo.style.display = "block";
+      header.style.boxShadow = "none";
+      header.style.borderBottom = "none";
     } else if (window.innerWidth <= 425 && window.scrollY >= 66) {
       header.style.background = "white";
       headerMenuList.style.color = "black";
       Black_Logo.style.display = "block";
       White_Logo.style.display = "none";
+      header.style.boxShadow = "0px 0px 7px 0px #999";
+      header.style.borderBottom = "1px solid #dcdcdc";
     } else if (window.innerWidth <= 425 && window.scrollY >= 0) {
       headerMenuList.style = " ";
       header.style = " ";
       Black_Logo.style.display = "none";
       White_Logo.style.display = "block";
+      header.style.boxShadow = "none";
+      header.style.borderBottom = "none";
     } else if ((header.className === "MenuOpenEvent") === true) {
       header.style.background = "white";
       headerMenuList.style.color = "black";
       Black_Logo.style.display = "block";
       White_Logo.style.display = "none";
+      header.style.boxShadow = "0px 0px 7px 0px #999";
+      header.style.borderBottom = "1px solid #dcdcdc";
     } else {
       headerMenuList.style = " ";
       header.style = " ";
       Black_Logo.style.display = "none";
       White_Logo.style.display = "block";
+      header.style.boxShadow = "none";
+      header.style.borderBottom = "none";
     }
   });
 }
