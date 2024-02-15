@@ -36,9 +36,9 @@
   text-overflow: ellipsis;
 }
 header {
-  /* box-shadow: 0px 0px 7px 0px #999; */
+  box-shadow: 0px 0px 7px 0px #999;
   z-index: 977;
-  /* border-bottom: 1px solid #dcdcdc; */
+  border-bottom: 1px solid #dcdcdc;
   width: 100%;
   position: fixed;
   left: 0;
@@ -794,6 +794,7 @@ swiper-slide {
   margin: 0 auto;
   position: relative;
   margin-top: 0;
+  font-family: "IBMPlexSansKR";
 }
 .about_wrap .about_Intro_sub_title {
   font-size: 22px;
@@ -1146,4 +1147,58 @@ li.noticeItem p {
   background: black;
   color: #fff;
   cursor: pointer;
+}
+.gallery_list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery_list ul li {
+  width: calc(100% / 3 - 20px);
+}
+.gallery_list ul li img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.gallery_desc {
+  overflow: hidden;
+  display: block;
+  padding: 30px 10px;
+  word-wrap: break-word;
+  white-space: normal;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+.gallery_desc h3 {
+  color: #1b1b1b;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.gallery_desc p {
+  display: inline-block;
+  font-size: 14px;
+  color: #555;
+  font-weight: 200;
+}
+.gallery_list ul li a:hover img {
+  filter: brightness(80%);
 }
