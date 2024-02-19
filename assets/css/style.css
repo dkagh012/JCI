@@ -18,6 +18,9 @@
   --colorBackgroundBeige: #f5f5f5;
   --colorHover: #c30d23;
 }
+.Open {
+  right: 0 !important;
+}
 .active {
   background: #0d51c5;
   color: white;
@@ -29,12 +32,16 @@
   font-family: "IBMPlexSansKR";
   margin-top: 0;
 }
+.MenuOpen {
+  display: block !important;
+}
 .hide {
   display: none !important;
 }
 .open {
   display: block !important;
 }
+
 .text_hidden {
   overflow: hidden;
   white-space: nowrap;
@@ -48,9 +55,10 @@ header {
   top: 0;
   height: 100px;
   /* background: #fff; */
+  transition: 0.7s;
 }
 .header_wrap {
-  max-width: 1480px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -60,7 +68,7 @@ header {
   width: 271px;
   position: absolute;
   display: block;
-  left: 0;
+  left: 20px;
   top: 24px;
 }
 .pclogo img {
@@ -124,6 +132,66 @@ header {
 .MenuBox {
   display: none;
 }
+.MobileMenuOpenBtn {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  display: none;
+}
+.MobileMenuList {
+  position: absolute;
+  top: 100px;
+  height: 100vh;
+  right: -400px;
+  transition: 0.7s;
+  width: 400px;
+  background: white;
+  display: none;
+  font-family: "IBMPlexSansKR";
+}
+.MobileMenuOpenBtn button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 36px;
+  color: black;
+}
+.OpenMobileMenuList button {
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  padding-left: 10px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Noto Sans KR";
+}
+
+.OpenMobileMenuList {
+  border-bottom: 1px solid #eee;
+  position: relative;
+  background: #fff;
+}
+
+.OpenMobileMenuList button i {
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: #096ad8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
 .subMenuList {
   position: absolute;
   left: 0;
@@ -135,7 +203,22 @@ header {
   box-shadow: 0px 3px 5px 0px #ddd;
   display: none;
 }
+.MobileMenu {
+  width: 100%;
+  display: none;
+  background: #dfdfdf;
+  padding-left: 20px;
+  padding: 10px 0 10px 20px;
+}
 
+ul.MobileMenu li a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  font-size: 14px;
+}
 .subMenuList .sub_Left {
   height: 300px;
   width: 20%;
@@ -319,6 +402,8 @@ swiper-slide {
 /* pop */
 
 .pop_container {
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
@@ -329,7 +414,7 @@ swiper-slide {
   gap: 100px;
 }
 .pop_container .pop_left {
-  width: 60%;
+  width: calc(100% - 480px - 100px);
   position: relative;
 }
 
@@ -462,10 +547,10 @@ swiper-slide {
   flex-direction: column;
   width: 40%;
   float: right;
-  min-height: 262px;
+  width: 480px;
 }
 .pop_right .pop_bottom {
-  width: 100%;
+  width: 480px;
   height: 100%;
   text-align: left;
   padding: 25px;
@@ -482,7 +567,7 @@ swiper-slide {
   position: absolute;
   top: 22%;
   text-align: left;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1;
   font-weight: bold;
   right: 6.5%;
@@ -509,6 +594,8 @@ swiper-slide {
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
   height: auto;
   margin: 0 auto;
   max-width: 1480px;
@@ -646,7 +733,6 @@ swiper-slide {
   top: 136px;
   height: 40px;
   width: 240px;
-  border-radius: 40px;
   font-size: 15px;
   border: 1px solid #e0e0e0;
   padding: 0 10px;
@@ -1227,4 +1313,207 @@ li.noticeItem p {
   vertical-align: middle;
   border: 1px solid#e5e5e5;
   padding: 10px;
+}
+@media all and (max-width: 1120px) {
+  .headerMenuList {
+    display: none;
+  }
+  .sub_Menu {
+    display: none;
+  }
+  .MobileMenuOpenBtn {
+    display: block;
+  }
+  .MobileMenuList {
+    display: block;
+  }
+  .BackgroundWhite {
+    box-shadow: rgb(153, 153, 153) 0px 0px 7px 0px !important;
+    border-bottom: 1px solid rgb(220, 220, 220) !important;
+    background: white !important;
+  }
+  #selfooter {
+    top: 69px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .pop_container {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .gallery_container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .pop_toppadding {
+    padding-top: 30px;
+  }
+  .pop_container .pop_right h3 {
+    font-size: 28px;
+  }
+  .pop_container .pop_left {
+    width: 100%;
+  }
+  .pop_container .pop_right {
+    width: 100%;
+  }
+  .pop_right .pop_bottom {
+    width: 100%;
+    height: 500px;
+  }
+  .pop_right .pop_bottom .pop_text {
+    font-size: 31px;
+  }
+  .pop_right .pop_bottom .pop_text span {
+    font-size: 61px;
+  }
+  .pop_right .pop_bottom > img {
+    width: 300px;
+  }
+}
+@media all and (max-width: 928px) {
+  .pop_right .pop_bottom .pop_text {
+    font-size: 25px;
+  }
+  .pop_right .pop_bottom .pop_text span {
+    font-size: 50px;
+  }
+}
+@media all and (max-width: 900px) {
+  .footers1 {
+    height: 260px;
+  }
+  .fdfd_1 img {
+    width: 230px;
+  }
+  .fdfd_1 {
+    left: 0;
+    top: 20px;
+  }
+  .fdfd_2 {
+    left: 0;
+    top: 85px;
+  }
+  .fdfd_3 {
+    left: 0px;
+    line-height: 1.5;
+    top: 125px;
+  }
+  .fdfd_4 {
+    left: 0px;
+    top: 155px;
+  }
+  .fdfd_5 {
+    left: 0px;
+    top: 185px;
+  }
+  .fdfd_6 {
+    left: 0px;
+    top: 215px;
+  }
+  .fdfd_5 em {
+    width: 50px;
+    letter-spacing: 5px;
+  }
+  .fdfd_6 em {
+    width: 50px;
+    letter-spacing: 22px;
+  }
+  .fdfd_3 span {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .MainSwiperContainer .swiper-slide .subtitle {
+    top: inherit;
+    font-size: 5.5vw;
+    bottom: 52vw;
+  }
+  .MainSwiperContainer .swiper-slide .text {
+    top: inherit;
+    font-size: 3vw;
+    bottom: 40vw;
+  }
+  .MainSwiperContainer .swiper-slide .title {
+    top: inherit;
+    font-size: 3vw;
+    bottom: 60vw;
+  }
+  .slide_btn {
+    display: none !important;
+  }
+}
+@media all and (max-width: 500px) {
+  .pop_container .pop_left h3 {
+    font-size: 5.4vw;
+  }
+  .pop_container .pop_menu > div > button {
+    font-size: 3.4vw;
+  }
+  .pop_link {
+    width: 6.4vw;
+    height: 6.4vw;
+    font-size: 4.4vw;
+  }
+  .pop_container .pop_menu {
+    padding-right: 6.4vw;
+  }
+  .pop_container .pop_menu > div > button {
+    padding: 0 3.6vw;
+  }
+  .tabled > div > div:nth-child(1) {
+    height: 6.4vw;
+    line-height: 6.4vw;
+    font-size: 3.2vw;
+    width: 6.4vw;
+    border-radius: 6.4vw;
+  }
+  .tabled > div > div:nth-child(3) {
+    font-size: 3.2vw;
+  }
+  .tabled > div > div:nth-child(2) {
+    font-size: 3.2vw;
+  }
+}
+@media all and (max-width: 425px) {
+  .footers2 {
+    font-size: 10px;
+  }
+  #selfooter {
+    top: 245px;
+    left: 0;
+  }
+  .footers1 {
+    height: 300px;
+  }
+  .fdfd_3 {
+    font-size: 10px;
+  }
+  .pclogo {
+    top: 21px;
+    width: 178px;
+    left: 10px;
+  }
+  .header_wrap {
+    height: 80px;
+  }
+  header {
+    height: 80px;
+  }
+  .MobileMenuOpenBtn {
+    top: 10px;
+  }
+  .MobileMenuList {
+    top: 80px;
+    width: 100%;
+  }
+}
+@media all and (max-width: 325px) {
+  .fdfd_3 {
+    top: 110px;
+  }
 }

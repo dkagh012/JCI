@@ -21,6 +21,13 @@ const MainCommunity = document.querySelectorAll(".tabled");
 const subMenuOpenBtn = document.querySelector(".subMenuOpenBtn");
 const SubMenuList = document.querySelector(".sub_MenuList");
 const MemberHistoryButton = document.querySelectorAll(".MemberHistoryButton");
+const MobileMenuOpenBtn = document.querySelector(".MobileMenuOpenBtn");
+const MobileMenuList = document.querySelector(".MobileMenuList");
+const OpenMobileMenuList = document.querySelectorAll(".OpenMobileMenuList");
+const MobileMenu = document.querySelectorAll(".MobileMenu");
+const MobileMenuListBackground = document.querySelector(
+  ".MobileMenuListBackground"
+);
 for (let i = 0; i < SubMenuOpen.length; i++) {
   SubMenuOpen[i].addEventListener("mouseover", () => {
     SubMenu[i].style.display = "flex";
@@ -222,11 +229,6 @@ $(".gallery_swiper ").each(function () {
         slidesPerGroup: 1, // 5개의 슬라이드를 그룹으로 설정
         spaceBetween: 40,
       },
-      768: {
-        slidesPerView: 3, // 한 번에 5개의 슬라이드 보이기
-        slidesPerGroup: 1, // 5개의 슬라이드를 그룹으로 설정
-        spaceBetween: 40,
-      },
       555: {
         slidesPerView: 2, // 한 번에 5개의 슬라이드 보이기
         slidesPerGroup: 1, // 5개의 슬라이드를 그룹으로 설정
@@ -300,3 +302,38 @@ MemberHistoryButton.forEach((Item) => {
     addClassList(Item, "MemberActive");
   });
 });
+MobileMenuOpenBtn.addEventListener("click", () => {
+  toggleClassList(MobileMenuList, "Open");
+  toggleClassList(header, "BackgroundWhite");
+  toggleClassList(MobileMenuListBackground, "open");
+
+  // MobileMenuList에 Open 클래스가 있는지 확인하여 로고 표시 여부 결정
+  if (MobileMenuList.classList.contains("Open")) {
+    // Open 클래스가 있으면 Black_Logo 표시, White_Logo 숨김
+    Black_Logo.style.display = "block";
+    White_Logo.style.display = "none";
+  } else {
+    // Open 클래스가 없으면 White_Logo 표시, Black_Logo 숨김
+    Black_Logo.style.display = "none";
+    White_Logo.style.display = "block";
+  }
+});
+MobileMenuListBackground.addEventListener("click", () => {
+  removeClassList(MobileMenuList, "Open");
+  removeClassList(header, "BackgroundWhite");
+  removeClassList(MobileMenuListBackground, "open");
+  Black_Logo.style.display = "none";
+  White_Logo.style.display = "block";
+});
+for (let i = 0; i < OpenMobileMenuList.length; i++) {
+  OpenMobileMenuList[i].addEventListener("click", () => {
+    console.log("1");
+    for (let j = 0; j < MobileMenu.length; j++) {
+      if (i === j) {
+        addClassList(MobileMenu[i], "MenuOpen"); // 선택한 메뉴 열기
+      } else {
+        removeClassList(MobileMenu[j], "MenuOpen"); // 다른 메뉴 닫기
+      }
+    }
+  });
+}
